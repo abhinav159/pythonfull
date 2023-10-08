@@ -1,0 +1,52 @@
+{% extends 'commontemplates/common_master.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .catalog-2 img{
+    
+    height: 300px;
+    
+    }
+    .cataloges{
+        
+        width: 100%;
+        box-shadow: yellow;
+        border: 0px ;
+        margin-left: 150px;
+        padding: 40px 10px;
+        
+    }
+    .btn1{
+        margin-left: 75px;
+        height: 40px;
+        width: 150px;
+        border: 1px solid yellowgreen;
+        border-radius: 10px;
+        background-color: aquamarine;
+    }
+    .catalog-2 p{
+        font-size: 20px;
+        text-align: center;
+        color: red;
+    }
+    </style>
+
+<section>
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{product.product_image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product.product_name}}</h5>
+                      <p class="card-text">{{product.product_description}}</p>
+                    </div>
+                  </div> 
+            </div>
+            {% endfor %}
+        </div>
+              
+
+
+{% endblock %}

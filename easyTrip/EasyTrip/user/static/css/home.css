@@ -1,0 +1,244 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+.header{
+    height: 800px;
+    background-image: url(../images/home.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 30px;
+    text-align: center;
+    color: red;
+    
+   
+}
+.header img{
+    float: left;
+    width: 170px;
+    height: 90px;
+}
+.login-btn{
+    width: 100px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px red solid;
+    border-radius: 50px;
+    background: transparent;
+    color: red;
+    float: right;
+}
+.header h1{
+    padding-top: 250px;
+    font-size: 40px;
+}
+.header p{
+    margin-left: 330px;
+}
+.input-group{
+    width: 500px;
+    max-width: 500px;
+    border-radius: 30px;
+    background: white;
+    margin: auto;
+    padding: 2px;
+    
+}
+.form-control{
+    border: 0!important;
+    border-radius: 30px !important;
+    margin: 2px;
+    box-shadow: none!important;
+}
+.input-group-text-btn{
+    width: 100px;
+    background-image: linear-gradient(white,aqua);
+    border: 0!important;
+    color: white;
+    padding-right: 25px;
+     border-radius: 30px !important;
+    box-shadow: none !important;
+    height: 40px;
+}
+.features{
+    padding: 100px 0;
+}
+ h1{
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+.feature-img img{
+    width: 100%;
+}
+.price{
+    width: 40px;
+    height: 40px;
+    background: orange;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 7px;
+    box-shadow: 20px;
+    position:absolute;
+    left: 20px;
+    bottom: -25px;
+}
+.feature-img{
+    position: relative;
+}
+.rating{
+    padding: 3px;
+    float: right;
+    background: white;
+    bottom: -1px;
+    right: 0;
+    position: absolute;
+}
+.features .fa{
+    font-size: 15px;
+    color: #ff5722;
+}
+.feature-details{
+    padding: 20px;
+    text-align: justify;
+    height: 250px;
+}
+.feature-details h4{
+    font-weight: 600;
+    margin-top: 20px;
+    color: red;
+}
+.feature-details .fa{
+    padding-left: 15px;
+}
+.feature-box{
+    box-shadow: 0 0 10px 1px rgb(145, 137, 122);
+    margin-bottom: 30px;
+}
+.gallery{
+    padding: 100px 0;
+    background: lightgrey;
+}
+.gallery-box img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.gallery-box img:hover{
+    transform: scale(1.1);
+}
+.gallery-box h4{
+    display: block;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-shadow: -2px 2px 2px #000;
+    transform: translate(-50%,-50%);
+}
+.gallery-box{
+    position: relative;
+    margin-bottom: 30px;
+}
+.banner{
+    height: 800px;
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 15%;
+}
+.banner-highlights{
+    padding: 70px 0;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+.booking-btn{
+    width: 120px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px red solid;
+    border-radius: 50px;
+    background: transparent;
+    color: red;
+    margin-top: 20px;
+    
+}
+.user-feedback{
+    padding: 100px 0;
+    
+}
+.user-review{
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgb(239, 146, 8);
+    padding-bottom: 50px;
+    
+    
+    
+
+
+}
+.user-review p{
+    padding: 50px 10px 10px 10px;
+}
+.user-feedback img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    margin: -50px 0 40px 40px ;
+}
+.user-review p::before{
+    content: '\201d';
+    display: block;
+    
+    font-size: 100px;
+    color: aqua;
+    font-family: sans-serif;
+    left: 44%;
+    top: -20px;
+}
+.footer{
+    padding: 100px 20px;
+    background-image: linear-gradient(#2d557d,#9610fb);
+    color: white;
+
+}
+.footer-logo{
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 70px;
+}
+.footer h4{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.footer p{
+    font-size: 12px;
+    text-align: justify;
+    padding-right: 35px;
+}
+.footer .row .fa{
+    padding-right: 20px;
+    font-size: 15px;
+}
+.login{
+    height: 600px;
+    background-color: rgba(44,62,80,0.7);
+    padding-top: 50px;
+    text-align: center;
+    color: red;
+    width: 600px;
+    margin-top: 50px;
+    margin-left: 450px;
+    border-radius: 10px;
+}

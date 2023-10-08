@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/dom.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- <h1 id="h1">helloo</h1>
+    <p class="p1">welcome</p>
+    <p class="p1">back</p>
+    <script>
+        var a =document.getElementById("h1")
+        console.log(a)
+        var b=document.getElementsByClassName("p1")
+        console.log(b)
+        b[1].innerHTML="hello1"
+    </script> -->
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Task</label>
+          <input type="text" class="form-control1" id="task" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">description</label>
+          <input type="text" class="form-control2" id="desc">
+        </div>
+       
+        <button type="button" onclick="addTask()" class="btn-1">Add</button>
+      </form>
+        
+      <table class="table" id="todo_tb">
+        <thead>
+          <tr>
+            <th scope="col">SN</th>
+            <th scope="col">task</th>
+            <th scope="col">description</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    
+      </table>
+      <script>
+        var s_no = 0
+        var tr_no = 0
+        function addTask(){
+             var tb = document.getElementById("todo_tb")
+             var new_tr = document.createElement("tr") //creating new row
+             var task = document.getElementById("task")
+             var desc = document.getElementById("desc")
+             var status = "pending"
+             var date = new Date()
+             var current_date = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
+             console.log(current_date)
+             tr_no ++
+             var tr_id = "tr"+tr_no
+             new_tr.setAttribute("id",tr_id)
+             //creating td inside newly created tr
+             var td_sn = new_tr.appendChild(document.createElement("td"))
+             var td_task = new_tr.appendChild(document.createElement("td"))
+             var td_desc = new_tr.appendChild(document.createElement("td"))
+             var td_date = new_tr.appendChild(document.createElement("td"))
+             var td_status = new_tr.appendChild(document.createElement("td"))
+             var td_action = new_tr.appendChild(document.createElement("td"))
+             s_no ++
+             td_sn.innerHTML = s_no
+             td_task.innerHTML = task.value
+             td_desc.innerHTML = desc.value
+             td_date.innerHTML = current_date
+             td_status.innerHTML = "<span style='color:red;'>pending</span>"
+             td_action.innerHTML = "<button onclick=taskCompleted() type='button' class='btn btn-primary'>completed</button>"
+             tb.appendChild(new_tr)
+             task.value = ""
+             desc.value = ""
+ 
+        }
+        function taskCompleted(){
+              var selected_row_id = event.target.parentNode.parentNode.id//to get tr id
+              var selected_row = document.getElementById(selected_row_id)
+              var children = selected_row.childNodes
+              console.log(children)
+              console.log(selected_row_id)
+              children[4].innerHTML= "<span style= 'color:green;'>Completed</span>"
+              selected_row.style.textDecoration="line-through"
+        }
+
+      </script> 
+      <form action="">
+        <label for="">password :</label>
+        <input type="password" placeholder="enter password" id="pass">
+        <input type="checkbox" onclick="changeType()">
+      </form>
+      <script>
+        function changeType(){
+          var password=document.getElementById("pass")
+          if(password.type=="password"){
+          password.type="text"
+          }
+          else{
+            password.type="password"
+          }
+        }
+      </script>
+</body>
+</html>

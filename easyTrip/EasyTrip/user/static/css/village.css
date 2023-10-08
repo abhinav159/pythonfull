@@ -1,0 +1,58 @@
+.header{
+    height: 600px;
+    background-image: url(../images/hampi.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 30px;
+    text-align: center;
+    color: red;
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.navi{
+    color: aquamarine;
+    
+    margin-left: 700px;
+    float: right;
+}
+.smart-btn{
+    width: 150px;
+    color: white;
+    background-color: blue;
+    border: 2px black solid;
+    border-radius: 50px;
+    height: 50px;
+   
+}
+.row{
+   
+    height: 900px;
+    background-color:white;
+    padding: 100px 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+   
+}
+.icon-img .fa{
+    
+   font-size: 50px;
+   
+}
+.icon-img{
+    text-align: center;
+}
+.icon-img p{
+    width: 100%;
+    text-align: center;
+    margin: 10px 20px;
+}
+.box{
+    padding: 20px 30px;
+    box-shadow: 0 0 0px 0px rgb(215, 146, 18);
+    
+}

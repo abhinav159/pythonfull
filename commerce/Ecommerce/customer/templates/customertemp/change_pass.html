@@ -1,0 +1,55 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+    .changepass{
+        width: 800px;
+        margin-left: 300px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .inp_box{
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+    }
+    .lab{
+        margin-top: 20px;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-left: 200px;
+    }
+    .lab1{
+        margin-top: 20px;
+        font-size: 20px;
+        padding-top: 20px;
+        margin-left: 200px;
+    }
+    .btn1{
+        margin-left: 350px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+<h1 style="text-align: center;">Change Password</h1>
+<section class="changepass bg-info">
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label lab">Current Password</label>
+          <input type="password" class="form-control inp_box" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label lab1">New Password</label>
+          <input type="password" class="form-control inp_box" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label lab1">Confirm Password</label>
+          <input type="password" class="form-control inp_box" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn1 btn btn-primary">Submit</button>
+      </form>
+</section>
+
+{% endblock %}

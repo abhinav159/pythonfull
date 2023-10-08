@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve Customer</title>
+    <link rel="stylesheet" href="{% static 'css/com.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="header">Approve Customer</h1>
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="main">
+                <img src="{% static 'images/com.jpg' %}" alt="" width="100%">
+                <p><a href="{% url 'ecom_admin:home' %}"> <button class="btn1"> HOME</button></a> </p>
+                <p><a href="{% url 'ecom_admin:approve_cust' %}"> <button class="btn1"> APPROVE CUSTOMER</button></a></p>
+                <p><a href="{% url 'ecom_admin:approve_seller' %}"> <button class="btn1"> APPROVE SELLER</button></a></p>
+                <p><a href="{% url 'ecom_admin:view_customer' %}"><button class="btn1">VIEW CUSTOMER</button></a></p>
+                <p><a href="{% url 'ecom_admin:view_seller' %}"><button class="btn1">VIEW SELLER</button></a></p>
+
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <table class="table table-dark ">
+                <thead class="tb1head">
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Password</th>
+                    <th>Approve</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends 'commontemplates/common_master.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section>
+    
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="cataloges">
+                    <div class="catalog-2">
+                        <form method="POST">
+                            {% csrf_token %}
+                        <img src="{{deatils.product_image}}" alt="">
+                        <p>{{details.product_name}}</p>
+                        <p>{{details.price}}</p>
+                        <p>{{details.product_description}}</p>
+                            
+                        <button class="btn1">ADD CART</button>
+                        {{msg}}
+                    </form>
+                    </div>
+                </div>
+              
+        </div>
+    
+</section>
+
+{% endblock %}

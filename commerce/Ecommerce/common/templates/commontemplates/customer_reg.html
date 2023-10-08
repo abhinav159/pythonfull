@@ -1,0 +1,107 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+  .seller-registration-form {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 1200px;
+
+}
+
+.seller-registration-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.seller-registration-form img{
+  float: left;
+  width: 500px;
+  height: 500px;
+  margin-top: 10px;
+}
+
+.seller-registration-form form {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.seller-registration-form label {
+  width: 200px;
+  font-size: 18px;
+  margin-bottom: -10px;
+}
+
+.seller-registration-form input[type="text"],
+.seller-registration-form input[type="email"],
+.seller-registration-form input[type="password"] {
+  width: 400px;
+  height: 35px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+.seller-registration-form input[type="radio"] {
+
+margin-top: 30px;
+
+}
+
+
+
+.seller-registration-form input[type="submit"] {
+  width: 120px;
+  height: 35px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+.sctn2{
+  width: 100%;
+}
+select{
+    width: 400px;
+  height: 35px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+</style>
+<section class="sctn2 bg-primary">
+  <h1 style="text-align: center;">Customer Registration</h1>
+
+<div class="seller-registration-form ">
+  <img src="{% static 'images/customer.png' %}" alt="">
+
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="name">Customer Name:</label><br>
+    <input type="text" id="name" name="cst_name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="cst_email"><br>
+    <label for="password">Phone:</label><br>
+    <input type="text" id="password" name="cst_phone"><br>
+    <label for="store-name">Address:</label><br>
+    <input type="text" id="store-name" name="cst_address"><br>
+    <label for="store-name">Gender:</label><br>
+    <select name="cst_gender" id="">Select
+        <option value="Male" >Male</option>
+        <option value="Female" >Female</option>
+    </select><br>
+    <label for="store-name">Password:</label><br>
+    <input type="password" id="store-name" name="cst_pass"><br>
+
+    <input type="submit" value="Submit">
+  </form> 
+</div>
+</section>
+{% endblock %}

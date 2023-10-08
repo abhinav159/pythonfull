@@ -1,0 +1,31 @@
+.firstname{
+    
+    margin-left: 580px;
+    margin-top: 50px;
+}
+.firstname input{
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+h1{
+    text-align: center;
+}
+.btn-1{
+    border: 1px solid greenyellow;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(88, 29, 226);
+    margin-left: 170px;
+    margin-top: 10px;
+}
+.firstname .gen{
+    width: 50px;
+    height: 50px;
+    font-size: 17px;
+}
+.foot{
+    margin-top: 300px;
+}

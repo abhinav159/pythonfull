@@ -1,0 +1,22 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<canvas id="canvas"></canvas>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/nokia.png' %}" class="card-img-top" alt="..."width = "100%" height="200px">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Card title</h5>
+                <p class="card-text">
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Show more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

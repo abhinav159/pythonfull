@@ -1,0 +1,107 @@
+{% extends 'commontemplates/common_master.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Customer Home</title>
+  <style>
+    /* Add some style to the page */
+body {
+  font-family: sans-serif;
+}
+
+.cus-home {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.cus-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cus-nav li {
+  display: inline-block;
+}
+
+.cus-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.customer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer-links a {
+  color: #333;
+  text-decoration: none;
+}
+.cus-nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .home{
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+  </style>
+
+</head>
+<body>
+  <header class="cus-home">
+    <h1 style="text-align: center;">My Ecommerce Store</h1>
+    <nav class="cus-nav">
+      <ul>
+        <li><a href="{% url 'customer:customer_home' %}">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome, Abhinav</h2>
+    <div class="customer-links">
+      <a href="#">My Orders</a>
+      <a href="#">My Details</a>
+      <a href="#">Logout</a>
+    </div>
+  </main>
+  <div class="row">
+    <div class="col-lg-3">
+        <div class="home">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'images/men.jpg' %}" class="card-img-top" width="100%" height="350px" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Face Serum</h5>
+              <p class="card-text">Aloe Vera Sunscreen Face Serum with Aloe Vera & Ashwagandha for UVA & B Protection - 30 ml</p>
+              <a href="#" class="btn btn-primary">View Product</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock %}

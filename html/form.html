@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Name of student</label>
+        <input type="text" id="stu_name"><br />
+        <b id="lab1"></b><br />
+        <label for="">address</label>
+        <textarea name="" id="address" cols="30" rows="10"></textarea><br />
+        <label for="">email</label>
+        <input id="email" type="email"> <br />
+        <b id="lab2"></b> <br />
+
+        <label for="">pin code</label>
+        <input id="num" type="number">
+        <button onclick="validation()">submit</button>
+    </form> 
+    <script>
+        function validation(){
+            s_name = document.getElementById('stu_name').value
+            address = document.getElementById('address').value
+            email = document.getElementById('email').value
+            pin = document.getElementById('num').value
+            validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            status = 0
+
+            if(s_name == ""){
+                document.getElementById('lab1').innerHTML = 'name cant be null'
+                document.getElementById('lab1').style.color = 'red'
+                status = 1
+            }
+            else{
+                document.getElementById('lab1').innerHTML = ""
+            }
+            if(email.match(validRegex)){
+                document.getElementById("lab2").innerHTML=""
+
+            }
+            else{
+                
+                document.getElementById('lab2').innerHTML="incorrect email format"
+                document.getElementById("lab2").style.color='red'
+                status = 1
+            }
+        }
+    </script>
+</body>
+</html>

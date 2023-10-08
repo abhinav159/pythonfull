@@ -1,0 +1,58 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+   <form method="POST">
+    {% csrf_token %}
+    <label for="">product_id</label>
+    <input type="number" id="pid" name="product_id">
+    <label for="" >product no.</label>
+
+    <input type="text" value="{{product.id}}">
+    <select name=""  id="product_no">
+      {% for product in data %}
+      <option value="{{product.id}}">{{product.product_number}}</option>
+      {% endfor %}
+
+    </select>
+    
+    <label for="">Product name</label>
+    <input type="text" readonly class="" id="p_name">
+    <label for="" >Current Stock</label>
+    <input type="text" readonly id="current_stock">
+    <label for="">New stock</label>
+    <input type="text" name="new_stock">
+    <button type="submit">submit</button>
+    {{msg}}
+
+   </form>
+
+
+   <script>
+        $('#product_no').change(function(){
+        $.ajaxSetup({
+            headers: {
+              "X-CSRFToken": $('[name=csrfmiddlewaretoken]').val()// passing csrf token in ajax request
+            }
+        })
+        $.ajax({
+
+            url:"{% url 'seller:get_stock' %}",//url in which ajax call is made
+            type:'POST', // method in which data is send
+            data:{
+                id:$(this).val()// sending data in json format, here key is email
+            },
+            success:function(response){
+
+                $('#p_name').val(response.p_name)
+                $('#current_stock').val(response.c_stock)
+                $('#pid').val(response.pid)
+            }
+        })
+    })
+
+   </script>
+{% endblock %}

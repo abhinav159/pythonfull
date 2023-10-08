@@ -1,0 +1,32 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
+          
+<script>
+    $('#email').change(function(){
+        $.ajaxSetup({
+            headers: {
+              "X-CSRFToken": $('[name=csrfmiddlewaretoken]').val()// passing csrf token in ajax request
+            }
+        })
+        $.ajax({
+
+            url:'{% url "common:email_exist" %}',//url in which ajax call is made
+            type:'POST', // method in which data is send
+            data:{
+                email:$(this).val()// sending data in json format, here key is email
+            },
+            success:function(response){
+                console.log(response.status)
+                alert('email id already exists ')
+            }
+        })
+    })
+</script>
+  
+{% endblock %}

@@ -1,0 +1,153 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/01741b9219.js"></script>
+
+{% load static %}
+<style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+main {
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.link1{
+    text-decoration: none;
+    color: white;
+}
+.link2{
+    text-decoration: none;
+    color: white;
+    
+}
+h2{
+    margin-top: 20px;
+}
+
+</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Seller Home</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome, Seller!</h1>
+      <nav>
+        <a href="#">Home</a> |
+        <a href="#">Orders</a> |
+        <a href="#">Inventory</a> |
+        <a href="#">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Recent Orders</h2>
+      <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>123456</td>
+          <td>Shirt</td>
+          <td>2</td>
+          <td>$20</td>
+        </tr>
+        <tr>
+          <td>987654</td>
+          <td>Pants</td>
+          <td>1</td>
+          <td>$30</td>
+        </tr>
+      </table>
+      <h2>Stock Left</h2>
+      <ul>
+        <li>Shirt - 3 left in stock</li>
+        <li>Pants - 5 left in stock</li>
+      </ul>
+    </main>
+    
+        <footer class="  bg-black ">
+            <div class="row fs-5 ms-3 link1 ">
+                <div class="col mt-5 ">
+                    <h3 class="fs-3 ">EcomApp</h3>
+                    <p class="fs-5 ">We see our customers as invited guests to a<br> party,and we are the hosts. It’s our job every <br>day to make every important aspect of the customer experience a little bit better.</p>
+                </div>
+                <div class="col ms-5 link1 mt-5">
+                    <h3 class="fs-3">Office</h3>
+                    <p>ABC Road</p>
+                    <p>While Field, ABCD</p>
+                    <p>Kerala, PIN 673501, India</p>
+                    <p class="email-id">abcd@gmail.com</p>
+                    <p>+91 - 01234567</p>
+                </div>
+                <div class="col  link1 mt-5" >
+                    <h3 class="fs-3 ms-4 ">Links</h3>
+                    <ul>
+                        <li><a href="#" class="link1">About Us</a></li>
+                        <li><a href="#" class="link1">Services</a></li>
+                        <li><a href="#" class="link1">Clients</a></li>
+                        <li><a href="#" class="link1">Awards</a></li>
+                        <li><a href="#" class="link1">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col link1 mt-5">
+                    <h3 class="fs-3">Newsletter</h3>
+                    <form action="">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder=" Enter your email id" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="link1 mt-5">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">©ECOMApp Ltd 2022</p>
+        </footer>
+    
+  </body>
+</html>

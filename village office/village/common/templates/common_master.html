@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<script src="https://kit.fontawesome.com/01741b9219.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg nav_1">
+        <button class="smart-btn1"> <b> VillageOffice</b></button>
+
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 navi">
+              <li class="agent">
+                <a class="nav-link active ms-2" aria-current="page" href=""><b>Staff Login</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active ms-2" aria-current="page" href=""><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-2" href="#"><b>Applications</b></a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link ms-2 " href="#" tabindex="-1" aria-disabled="true"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-2 " href="#" tabindex="-1" aria-disabled="true"><b>Contact</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  ms-2" href="" tabindex="-1" aria-disabled="true"><b>Login</b></a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      {% block content %}
+
+      {% endblock %}
+      <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="{% static 'images/logo1.png' %}" alt="" class="footer-logo">
+                    <p>Travel Across The World With Us
+                        subscribe EasyTrip YouTube channel for more informations</p>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Freature</h4>
+                    <p>Deals & Offers</p>
+                    <p>Customer Reviews</p>
+                    <p>Cancelation Policy</p>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Quick Contact</h4>
+                    <p><i class="fa fa-phone-square"></i> +91 568(845)-4545</p>
+                    <p><i class="fa fa-envelope"></i> villageoffice@gmail.com</p>
+                    <p><i class="fa fa-home"></i>Kerala,India</p>
+
+                </div>
+                <div class="col-lg-3">
+                    <h4>Follow Us On</h4>
+                    <p><i class="fa fa-facebook-official"></i>facebook</p>
+                    <p><i class="fa fa-youtube-play"></i> youtube</p>
+                    <p><i class="fa fa-twitter"></i>Twitter</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

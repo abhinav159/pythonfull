@@ -1,0 +1,33 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+.btn-4{
+  margin-left: 60px;
+}
+.card1{
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+
+</style>
+    <h1 style="text-align: center;">Product Catalog</h1>
+        <div class="row">
+            <div class="col-lg-3">
+
+                <div class="card card1" style="width: 18rem;">
+                    <img src="{% static 'images/lap.jpg' %}" class="card-img-top" alt="..." width="80%" height="250px">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn-4 btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

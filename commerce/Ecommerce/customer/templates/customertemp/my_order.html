@@ -1,0 +1,94 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+    body {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#order-details {
+  margin-top: 20px;
+}
+
+#order-details h2 {
+  margin-bottom: 10px;
+}
+
+#order-details p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Order</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>My Order</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Product 1</td>
+        <td>1</td>
+        <td>$100</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Product 2</td>
+        <td>1</td>
+        <td>$50</td>
+        <td>$50</td>
+      </tr>
+      <tr>
+        <td colspan="3">Subtotal:</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td colspan="3">Shipping:</td>
+        <td>$10</td>
+      </tr>
+      <tr>
+        <td colspan="3">Total:</td>
+        <td>$160</td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="order-details">
+    <h2>Order Details</h2>
+    <p>Order Number: 12345</p>
+    <p>Date: 01/01/2022</p>
+    <p>Shipping Address: 123 Main Street, Anytown USA 12345</p>
+  </div>
+</body>
+</html>
+{% endblock %}

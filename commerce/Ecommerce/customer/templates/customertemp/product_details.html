@@ -1,0 +1,83 @@
+{% extends 'commontemplates/common_master.html' %}
+
+
+
+{% block content %}
+{% load static %}
+<style>
+    body {
+  font-family: sans-serif;
+}
+
+#product-image {
+  float: left;
+  margin-right: 20px;
+}
+
+#product-info {
+  margin-left: 100px;  
+  margin-top: 400px;
+  padding-top: 40px;
+}
+
+#product-info h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#product-info ul {
+  list-style: none;
+  margin-left: -30px;
+  padding-top:  20px;
+}
+
+#product-info li {
+  margin-bottom: 5px;
+}
+
+#product-info p {
+  margin: 0;
+}
+
+button {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #444;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1 style="text-align: center;">Product Details</h1>
+  <div id="product-image">
+    <img src="{% static 'images/men.jpg' %}" width="350px" height="350px" alt="Product Image">
+  </div>
+  <div id="product-info">
+    <h2>Product Name</h2>
+    <p>Product Description</p>
+    <ul>
+      <li>Product Feature 1</li>
+      <li>Product Feature 2</li>
+      <li>Product Feature 3</li>
+    </ul>
+    <p>Price: $100</p>
+    <button>Add to Cart</button>
+  </div>
+</body>
+</html>
+
+
+{% endblock %}

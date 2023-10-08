@@ -1,0 +1,65 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+.add-form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.add-form input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.add-form input[type="file"] {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.add-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.add-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+</style>
+<form class="add-form">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="price">Price:</label><br>
+    <input type="number" id="price" name="price"><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description"></textarea><br>
+    <label for="image">Image:</label><br>
+    <input type="file" id="image" name="image"><br><br>
+    <button type="submit">Add Product</button>
+  </form> 
+  {% endblock %}

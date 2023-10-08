@@ -1,0 +1,45 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <form method="POST">
+            {{ msg }}
+            {% csrf_token %}
+            <legend>Log into Your Account</legend>
+            <p class="edd-login-username">
+                <label for="user_login">Username or Email</label>
+                <input name="user_login" id="edd_user_login" class="edd-required edd-input" type="text">
+            </p>
+            <p class="edd-login-password">
+                <label for="edd_user_pass">Password</label>
+                <input name="user_pass" id="edd_user_pass" class="edd-password edd-required edd-input"
+                    type="password">
+            </p>
+            <p class="edd-login-remember">
+                <label><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me</label>
+            </p>
+            <p class="edd-login-submit">
+                <input type="hidden" name="edd_redirect" value="https://colorlib.com/checkout/my-account/">
+                <input type="hidden" name="edd_login_nonce" value="dcc812085e">
+                <input type="hidden" name="edd_action" value="user_login">
+                <input id="edd_login_submit" type="submit" class="edd-submit btn btn-default" value="Log In">
+            </p>
+            <p class="edd-lost-password">
+                <a href="">
+                    forgot Password? </a>
+            </p>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+{% endblock %}

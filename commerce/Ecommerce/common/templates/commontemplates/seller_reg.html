@@ -1,0 +1,94 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+  .seller-registration-form {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 1200px;
+
+}
+
+.seller-registration-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.seller-registration-form img{
+  float: left;
+  width: 450px;
+}
+
+.seller-registration-form form {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.seller-registration-form label {
+  width: 200px;
+  font-size: 18px;
+  margin-bottom: -10px;
+}
+
+.seller-registration-form input[type="text"],
+.seller-registration-form input[type="email"],
+.seller-registration-form input[type="password"] {
+  width: 400px;
+  height: 35px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.seller-registration-form input[type="submit"] {
+  width: 120px;
+  height: 35px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.sctn2{
+  width: 100%;
+}
+
+</style>
+<section class="sctn2 bg-primary">
+  <h1 style="text-align: center;">Seller Registration</h1>
+
+<div class="seller-registration-form ">
+  <img src="{% static 'images/seller2.png' %}" alt="">
+
+  <form>
+    <label for="name">Seller Name:</label><br>
+    <input type="text" id="name" name="s_sellername"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="s_email"><br>
+    <label for="password">Phone:</label><br>
+    <input type="text" id="password" name="s_phone"><br>
+    <label for="store-name">Address:</label><br>
+    <input type="text" id="store-name" name="s_address"><br>
+    <label for="store-name">Company Name:</label><br>
+    <input type="text" id="store-name" name="s_cmpny"><br>
+    <label for="store-name">Account Holder Name:</label><br>
+    <input type="text" id="store-name" name="s_accname"><br>
+    <label for="store-name">IFSC Code:</label><br>
+    <input type="text" id="store-name" name="s_ifsc"><br>
+    <label for="store-name">Branch:</label><br>
+    <input type="text" id="store-name" name="s_branch"><br>
+    <label for="store-name">Account Number:</label><br>
+    <input type="text" id="store-name" name="s_accnum"><br>
+    <label for="store-name">Photo:</label><br>
+    <input type="file" id="store-name" name="s_pic"><br>
+    <input type="submit" value="Submit">
+  </form> 
+</div>
+</section>
+{% endblock %}

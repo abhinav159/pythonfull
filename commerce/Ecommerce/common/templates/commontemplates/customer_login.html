@@ -1,0 +1,98 @@
+{% extends 'commontemplates/common_master.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+    .sctn {
+
+        width: 800px;
+        height: px;
+        margin-left: 300px;
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+
+    .form1 {
+        margin-left: 200px;
+        margin-top: 20px;
+        padding: 10px 30px;
+
+    }
+
+    .form2 {
+        margin-left: 200px;
+        margin-top: 100px;
+        padding: 10px 30px;
+
+    }
+
+    .btn1 {
+        margin-left: 350px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .inp-box {
+        width: 350px;
+
+    }
+    .forgot{
+        margin-left: 230px           ;
+    }
+</style>
+<h1 style="text-align: center ;">Customer Login</h1>
+
+<section class="sctn bg-info">
+
+    <form method="POST">
+        {% csrf_token %}
+       
+        <table>
+            <tr>
+                <td>
+                    <div class="form2">
+
+                        <label for="" class="form-label">Email address</label>
+                        <input type="email" class="form-control inp-box" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" name="email">
+                            {{msg}}
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+                    </div>
+                </td><br />
+            <tr>
+                <td>
+
+                    <div class="form1">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="forgot">
+                        <a href="">
+                            forgot Password? </a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="forgot">
+                        <a href="{% url 'common:customer_reg' %}">
+                            Register </a>
+                    </p>
+                </td>
+            </tr>
+        
+            <tr>
+                <td><button type="submit" class="btn btn-primary btn1">Submit</button></td>
+            </tr>
+    </form>
+    </table>
+</section>
+
+
+
+{% endblock %}
